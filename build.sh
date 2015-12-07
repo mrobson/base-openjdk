@@ -1,4 +1,4 @@
-DOCKER_IMAGE_NAME=mrobson/fuse-base-openjdk
+DOCKER_IMAGE_NAME=mrobson/base-openjdk
 DOCKER_IMAGE_VERSION=7
 
 docker rmi --force=true ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION}
