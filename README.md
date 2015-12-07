@@ -1,3 +1,3 @@
-fuse-base-openjdk7
+fuse-base-openjdk8
 ------------------
-Base level image from CentOS 6, installs JDK7 and sets JAVA_HOME.
+Base level image, installs JDK8 and sets JAVA_HOME.
