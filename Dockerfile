@@ -3,7 +3,10 @@ FROM centos:centos6
 MAINTAINER Matthew Robson <matthewrobson@gmail.com>
 
 RUN 	\
-	yum install -y java-1.8.0-openjdk-devel.x86_64 && \
-	yum clean all -y
+	yum install -y java-1.8.0-openjdk-devel.x86_64 \
+			bind-utils \
+			iputils && \
+	yum clean all -y && \
+	sed -i -e 's/securerandom.source=file:\/dev\/random/securerandom.source=file:\/dev\/urandom/' /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64/jre/lib/security/java.security
 
-ENV JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk.x86_64
+ENV JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.71-2.b15.el7_2.x86_64
